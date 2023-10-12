@@ -1,13 +1,10 @@
 "use server";
 import Image from "next/image";
 import Button from "./button";
-
 import { HiPencilSquare, HiOutlineArrowLeftOnRectangle } from "react-icons/hi2";
-import { CiTrophy } from "react-icons/ci";
+import { User_Image } from "@/utils/constants";
 
 const Header = () => {
-  const User_Image =
-    "https://e7.pngegg.com/pngimages/442/17/png-clipart-computer-icons-user-profile-male-user-heroes-head-thumbnail.png";
   return (
     <header className=" flex px-3 sm:px-6 justify-between border-b-2 border-blue-400  ">
       <div className="flex items-center  gap-1 sm:gap-3 ">
@@ -22,14 +19,14 @@ const Header = () => {
       <div className="flex p-2 sm:p-4 gap-1 sm:gap-4">
         <Button
           text="Add Project"
-          textColor="white"
-          bgColor="rgb(59 130 246)"
+          color="white"
+          backgroundColor="rgb(59 130 246)"
           icon={<HiPencilSquare size={20} />}
         />
         <Button
           text="Sign out"
-          textColor="black"
-          bgColor="rgb(209 213 219)"
+          color="black"
+          backgroundColor="rgb(209 213 219)"
           icon={<HiOutlineArrowLeftOnRectangle size={20} />}
         />
         <Image src={User_Image} width={40} height={40} />
